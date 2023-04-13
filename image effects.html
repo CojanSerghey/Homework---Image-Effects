@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Effects</title>
+    <style>
+        body {
+            background-color: #122;
+        }
+        #imageEffects {
+            width: 600px;
+            height: 400px;
+            border: 3px solid white;
+
+            margin: 250px auto;
+            background-image: url(319-600x400G.jpg);
+        }
+        #imageEffects .slide {
+            width: 300px;
+            height: 400px;
+            background-image: url(319-600x400.jpg);
+            border-right: 3px solid white;
+            display: flex;
+        }
+        #imageEffects .slide a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            transform: translateX(287px) translateY(191px);
+        }
+
+        #right:target .slide {
+            width: 500px;
+            transition: .5s;
+        }
+        #left:target .slide {
+            width: 200px;
+            transition: .5s;
+        }
+        #left:target .slide a {
+            transition: .5s;
+            transform: translateX(187px) translateY(191px);
+        }
+        #right:target .slide a {
+            transition: .5s;
+            transform: translateX(487px) translateY(191px);
+        }
+            
+        
+
+        
+    </style>
+</head>
+<body>
+    <div id="right">
+     <div id="left">
+
+    <div id="imageEffects">
+        <div class="slide">
+            <a href="#left">⮘</a>
+            <a href="#right">⮚</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+</body>
+</html>
